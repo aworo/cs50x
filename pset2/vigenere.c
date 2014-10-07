@@ -10,6 +10,16 @@ int main(int argc, string argv[])
 
 
     string k = argv[1];   // k is the keyword entered as a CL argument
+    for(int i = 0; k[i]; i++)
+    {
+        if isalpha(k[i])
+        {
+            k[i] = tolower(k[i]);
+        }
+        else
+            return 1;  
+    }   
+
     if ( argc != 2  ) // Need to add condition for non-alpha check
     {
         printf("You should only have one alphaetical argument!\n");
@@ -57,6 +67,7 @@ int main(int argc, string argv[])
                 printf("%c", p[i]);
             }
         }    
-    }
     printf("\n");
+    }
+ 
 }

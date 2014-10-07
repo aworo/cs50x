@@ -26,22 +26,30 @@ int main(int argc, string argv[])
                 if ( isupper( p[i] ) )
 
                 {
-                    if ((k[keychar % strlen(k)] + p[i]- 97) > 132 )
+                    if ((k[keychar % strlen(k)] + p[i]) > 187 )
                     {
-                        printf("%c", p[i] + k[keychar % strlen(k)] - 71);
+                        printf("%c", p[i] + k[keychar % strlen(k)] - 123);
                     }
                     else
                     {
                         printf("%c", p[i] + k[keychar % strlen(k)] - 97);
                     }    
-                    keychar++;                    
+                    
                 }
                     
                 else
                 {
-                    printf("%c", p[i] + k[keychar % strlen(k)] - 97);
-                    keychar++;
+                  
+                    if ((k[keychar % strlen(k)] + p[i]) > 219 )
+                    {
+                        printf("%c", p[i] + k[keychar % strlen(k)] - 123);
+                    }
+                    else
+                    {
+                        printf("%c", p[i] + k[keychar % strlen(k)] - 97);
+                    }  
                 }
+                 keychar++; 
             }
             
             else 
@@ -50,4 +58,5 @@ int main(int argc, string argv[])
             }
         }    
     }
+    printf("\n");
 }
